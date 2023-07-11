@@ -40,7 +40,7 @@ namespace Group2_Sem3_Accountant.Controllers
         }
 
         [HttpPut]
-        public IActionResult Update( Position position)
+        public IActionResult Update(Position position)
         {
             _context.Positions.Update(position);
             _context.SaveChanges();

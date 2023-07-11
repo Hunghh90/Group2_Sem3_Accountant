@@ -25,15 +25,16 @@ namespace Group2_Sem3_Accountant.Controllers
         public IActionResult Register(UserRegister user)
         {
             var hashed = BCrypt.Net.BCrypt.HashPassword(user.Password);
-            var u = new Entities.User { 
-                Email = user.Email, 
-                Name = user.Name, 
-                Birthday = user.Birthday, 
-                Address = user.Address, 
+            var u = new Entities.User
+            {
+                Email = user.Email,
+                Name = user.Name,
+                Birthday = user.Birthday,
+                Address = user.Address,
                 Telephone = user.Telephone,
                 Role = user.Role,
                 Permission = user.Permission,
-                Password = hashed 
+                Password = hashed
             };
             _context.Users.Add(u);
             _context.SaveChanges();

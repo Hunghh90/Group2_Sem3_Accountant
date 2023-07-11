@@ -11,5 +11,11 @@ public partial class Department
 
     public byte? Status { get; set; }
 
+    public DateTime? UpdatedAt { get; set; }
+
+    public DateTime? CreatedAt { get; set; }
+
+    public decimal? Allowance { get; set; }
+
     public virtual ICollection<Staff> Staff { get; set; } = new List<Staff>();
 }

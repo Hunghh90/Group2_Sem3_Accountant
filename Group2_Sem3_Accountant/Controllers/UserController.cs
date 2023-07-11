@@ -31,11 +31,11 @@ namespace Group2_Sem3_Accountant.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create (User user)
+        public IActionResult Create(User user)
         {
             _context.Users.Add(user);
             _context.SaveChanges();
-            return Created($"/get-by-id?id={user.Id}",user);
+            return Created($"/get-by-id?id={user.Id}", user);
         }
 
         [HttpPut]

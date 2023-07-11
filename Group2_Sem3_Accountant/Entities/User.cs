@@ -25,7 +25,23 @@ public partial class User
 
     public string? Permission { get; set; }
 
-    public virtual ICollection<Financein> Financeins { get; set; } = new List<Financein>();
+    public DateTime? UpdatedAt { get; set; }
 
-    public virtual ICollection<Financeout> Financeouts { get; set; } = new List<Financeout>();
+    public DateTime? CreatedAt { get; set; }
+
+    public virtual ICollection<Advance> AdvanceUserCreates { get; set; } = new List<Advance>();
+
+    public virtual ICollection<Advance> AdvanceUsers { get; set; } = new List<Advance>();
+
+    public virtual ICollection<Financein> FinanceinUserCreates { get; set; } = new List<Financein>();
+
+    public virtual ICollection<Financein> FinanceinUsers { get; set; } = new List<Financein>();
+
+    public virtual ICollection<Financeout> FinanceoutUserCreates { get; set; } = new List<Financeout>();
+
+    public virtual ICollection<Financeout> FinanceoutUsers { get; set; } = new List<Financeout>();
+
+    public virtual ICollection<Payroll> PayrollUserCreates { get; set; } = new List<Payroll>();
+
+    public virtual ICollection<Payroll> PayrollUsers { get; set; } = new List<Payroll>();
 }

@@ -12,7 +12,7 @@ namespace Group2_Sem3_Accountant.Controllers
         public DepartmentController(Group2Sem3Context context)
         {
             _context = context;
-        }   
+        }
 
         [HttpGet]
         public IActionResult Index()
@@ -26,8 +26,8 @@ namespace Group2_Sem3_Accountant.Controllers
         public IActionResult Get(int id)
         {
             var department = _context.Departments.Find(id);
-            if(department == null) 
-               return NotFound(); 
+            if (department == null)
+                return NotFound();
             return Ok(department);
         }
 
@@ -41,7 +41,7 @@ namespace Group2_Sem3_Accountant.Controllers
 
         [HttpPut]
         public IActionResult Update(Department department)
-        { 
+        {
             _context.Departments.Update(department);
             _context.SaveChanges();
             return NoContent();

@@ -21,7 +21,17 @@ public partial class Financeout
 
     public byte? Status { get; set; }
 
+    public decimal? Amount { get; set; }
+
+    public DateTime? CreatedAt { get; set; }
+
+    public DateTime? UpdatedAt { get; set; }
+
+    public int? UserCreateId { get; set; }
+
     public virtual Typefinanceout? Typefinanceout { get; set; }
 
     public virtual User? User { get; set; }
+
+    public virtual User? UserCreate { get; set; }
 }

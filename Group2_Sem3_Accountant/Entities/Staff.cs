@@ -25,9 +25,17 @@ public partial class Staff
 
     public DateTime JoinDate { get; set; }
 
+    public DateTime? UpdatedAt { get; set; }
+
+    public DateTime? CreatedAt { get; set; }
+
+    public decimal? Basesalary { get; set; }
+
     public virtual ICollection<Advance> Advances { get; set; } = new List<Advance>();
 
-    public virtual Department? Department { get; set; } = null!;
+    public virtual Department Department { get; set; } = null!;
 
-    public virtual Position? Position { get; set; } = null!;
+    public virtual ICollection<Payroll> Payrolls { get; set; } = new List<Payroll>();
+
+    public virtual Position Position { get; set; } = null!;
 }

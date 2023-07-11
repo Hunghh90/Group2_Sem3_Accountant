@@ -17,5 +17,17 @@ public partial class Advance
 
     public int StaffId { get; set; }
 
+    public DateTime? UpdatedAt { get; set; }
+
+    public DateTime? CreatedAt { get; set; }
+
+    public int? UserId { get; set; }
+
+    public int? UserCreateId { get; set; }
+
     public virtual Staff Staff { get; set; } = null!;
+
+    public virtual User? User { get; set; }
+
+    public virtual User? UserCreate { get; set; }
 }

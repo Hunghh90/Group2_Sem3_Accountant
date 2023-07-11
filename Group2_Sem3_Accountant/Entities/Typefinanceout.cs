@@ -11,5 +11,9 @@ public partial class Typefinanceout
 
     public byte? Status { get; set; }
 
+    public DateTime? UpdatedAt { get; set; }
+
+    public DateTime? CreatedAt { get; set; }
+
     public virtual ICollection<Financeout> Financeouts { get; set; } = new List<Financeout>();
 }

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Group2_Sem3_Accountant.Controllers
 {
     [ApiController]
-    [Route ("api/typefinanceins")]
+    [Route("api/typefinanceins")]
     public class TypeFinanceInController : ControllerBase
     {
         private readonly Group2Sem3Context _context;
@@ -14,7 +14,7 @@ namespace Group2_Sem3_Accountant.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index() 
+        public IActionResult Index()
         {
             var tfi = _context.Typefinanceins.ToList<Typefinancein>();
             return Ok(tfi);
